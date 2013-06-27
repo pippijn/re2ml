@@ -1,0 +1,24 @@
+File "re2ml/t0008.mll", line 179, characters 64-107:
+Warning: Transition to state 64 on a strict superset of ['\n']
+         Source locations may not be tracked correctly in this rule
+         Consider using the -auto-loc option
+File "re2ml/t0008.mll", line 180, characters 64-109:
+Warning: Transition to state 68 on a strict superset of ['\n']
+         Source locations may not be tracked correctly in this rule
+         Consider using the -auto-loc option
+File "re2ml/t0008.mll", line 176, characters 64-108:
+Warning: Transition to state 128 on a strict superset of ['\n']
+         Source locations may not be tracked correctly in this rule
+         Consider using the -auto-loc option
+File "re2ml/t0008.mll", line 157, characters 64-78:
+Warning: Transition to state 128 on a strict superset of ['\n']
+         Source locations may not be tracked correctly in this rule
+         Consider using the -auto-loc option
+File "re2ml/t0008.mll", line 157, characters 64-78:
+Warning: Transition to state 130 on a strict superset of ['\n']
+         Source locations may not be tracked correctly in this rule
+         Consider using the -auto-loc option
+File "re2ml/t0008.mll", line 157, characters 64-78:
+Warning: Transition to state 128 on a strict superset of ['\n']
+         Source locations may not be tracked correctly in this rule
+         Consider using the -auto-loc option

@@ -1,0 +1,2 @@
+File "re2ml/t0016.mll", line 1, characters 8-20:
+Error: No such built-in regexp: '\nonexistent'

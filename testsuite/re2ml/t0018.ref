@@ -1,0 +1,10 @@
+File "re2ml/t0018.mll", line 1, characters 8-19:
+Error: No such regexp alias: 'nonexistent'
+File "re2ml/t0018.mll", line 2, characters 8-19:
+Error: No such regexp alias: 'nonexistent'
+File "re2ml/t0018.mll", line 3, characters 26-27:
+Error: No such regexp alias: 'd'
+File "re2ml/t0018.mll", line 8, characters 2-3:
+Error: No such regexp alias: 'd'
+File "re2ml/t0018.mll", line 8, characters 7-8:
+Error: No such regexp alias: 'd'
