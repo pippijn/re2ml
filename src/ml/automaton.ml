@@ -136,7 +136,7 @@ module Make(D : Determinism)(S : StateType)(T : TransitionType)
 
 
   let cardinal fsm =
-    ExtArray.count BatOption.is_some fsm.states
+    CoreArray.count BatOption.is_some fsm.states
 
 
   (* add a new empty state *)

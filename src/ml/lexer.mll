@@ -104,7 +104,7 @@
 
 
   let parse_string str =
-    Sloc.at str (Sloc.value str |> remove_quotes |> ExtString.unescaped)
+    Sloc.at str (Sloc.value str |> remove_quotes |> CoreString.unescaped)
 
   let parse_char str =
     let unesaped = Sloc.value (parse_string str) in

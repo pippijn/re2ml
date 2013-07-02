@@ -3,28 +3,28 @@ Target		= re2ml
 
 # Sources
 Modules[] =
-	Ast
-	Automaton
-	CharClass
-	Dfa
-	EmitCode
-	Lexer
-	Minimisation
-	Nfa
-	Options
-	Parse
-	Parser
-	Re2ml
-	Reachability
-	Resolve
-	Simplify
+  Ast
+  Automaton
+  CharClass
+  Dfa
+  EmitCode
+  Lexer
+  Minimisation
+  Nfa
+  Options
+  Parse
+  Parser
+  Re2ml
+  Reachability
+  Resolve
+  Simplify
 
 # Library dependencies
-Requires[] =
-	baselib
-	camlp4.fulllib
-	codegen
-	sexplib.syntax
+OCaml-Requires[] =
+  baselib
+  camlp4.fulllib
+  codegen
+  sexplib.syntax
 
 # Camlp4
 Flags. +=
@@ -34,4 +34,4 @@ Flags. +=
   $|emitCode.ml|	= -pp camlp4of
   $|nfa.ml|		= -syntax camlp4o
 
-ocaml-program ()
+program (.DEFAULT)

@@ -123,7 +123,7 @@ let e_closure eclosure estates =
   (* add all epsilon-accessible states from other epsilon-accessible
    * states to the e-states list for the current state *)
   List.fold_left (fun estates target ->
-    ExtList.unordered_append estates (get_e_closure eclosure target)
+    CoreList.unordered_append estates (get_e_closure eclosure target)
   ) estates estates
 
 let rec estates_closure eclosure =
