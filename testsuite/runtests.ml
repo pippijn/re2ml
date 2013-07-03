@@ -4,7 +4,7 @@
 
 TestFramework.(run "testsuite" [
   {
-    tool = "re2ml";
+    tool = "re2ml.native";
     suffixes = [".mll"];
     options = None;
     dirs = [
