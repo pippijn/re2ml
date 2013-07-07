@@ -1,7 +1,6 @@
+open CorePervasives
 open Camlp4.PreCast
 module Printer = Printers.OCaml
-
-let (|>) = BatPervasives.(|>)
 
 
 type span =
@@ -212,7 +211,7 @@ let build_cases _loc targets =
   (* cases *)
   Ast.mcOr_of_list (List.rev cases),
   (* accepts_full_range *)
-  BatArray.for_all BatPervasives.identity acceptance
+  BatArray.for_all identity acceptance
 
 
 let accept_case _loc targets =
