@@ -3,10 +3,9 @@
 (* +=====~~~-------------------------------------------------------~~~=====+ *)
 
 TestFramework.(run "testsuite" [
-  {
+  { empty with
     tool = "re2ml.native";
     suffixes = [".mll"];
-    options = None;
     dirs = [
       "../src";
       "re2ml";
