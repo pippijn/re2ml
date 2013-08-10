@@ -77,7 +77,7 @@ lexeme
 
 
 regexps
-	: or_regexps					{ match $1 with [a] -> a | l -> Alternation (List.rev l) }
+	: or_regexps binding				{ $2 (match $1 with [a] -> a | l -> Alternation (List.rev l)) }
 
 
 or_regexps
@@ -90,7 +90,7 @@ sequence
 
 
 regexp
-	: atom quantifier binding			{ $3 ($2 $1) }
+	: atom quantifier				{ $2 $1 }
 
 
 quantifier
