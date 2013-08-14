@@ -1,0 +1,8 @@
+=head1 Re2ml
+
+Re2ml is a lexical analyser generator for OCaml. It was written from scratch
+with speed and usability in mind. It aims to be fully compatible with
+C<ocamllex>, but compiles to a set of mutually recursive functions, instead of
+using table interpretation.
+
+L<Git repository|https://github.com/pippijn/re2ml>
