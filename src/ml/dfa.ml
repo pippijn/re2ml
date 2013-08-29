@@ -259,7 +259,7 @@ let of_nfa (name, args, (nfa, actions)) =
   );
 
   if Options._dot () then (
-    BatStd.with_dispose ~dispose:close_out
+    BatPervasives.with_dispose ~dispose:close_out
       (fun out -> Nfa.Fsm.to_dot ~lr:true ~final:false out nfa) (open_out "nfa.dot");
     ignore (Sys.command "dot -Tpng nfa.dot -o nfa.png");
   );
@@ -281,7 +281,7 @@ let of_nfa (name, args, (nfa, actions)) =
         (construct_subsets nfa state_store subset_map eclosure dfa)) (State.start state_store);
 
     if Options._dot () then (
-      BatStd.with_dispose ~dispose:close_out
+      BatPervasives.with_dispose ~dispose:close_out
         (fun out -> Fsm.to_dot ~lr:true ~final:false out dfa) (open_out "dfa.dot");
       ignore (Sys.command "dot -Tpng dfa.dot -o dfa.png");
     );

@@ -1,4 +1,4 @@
-let closing f o = BatStd.with_dispose ~dispose:close_in f o
+let closing f o = BatPervasives.with_dispose ~dispose:close_in f o
 
 let parse parse pos_fname lexbuf =
   Lexing.(lexbuf.lex_curr_p <- {
