@@ -174,8 +174,8 @@ let resolve_aliases =
     (* We allow redefinition as in ML, but warn about it, since it is
      * probably not what the user wants. *)
     if LocStringMap.mem name map then
-      Diagnostics.warning name "regexp name %a already defined"
-        Sloc.pp_print_string name;
+      Diagnostics.warning name "regexp name %s already defined"
+        (Sloc.value name);
     LocStringMap.add name regexp map
   ) builtins
 @
