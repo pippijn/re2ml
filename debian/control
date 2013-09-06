@@ -1,0 +1,26 @@
+Source: ocaml-re2ml
+Section: ocaml
+Priority: optional
+Maintainer: Pippijn van Steenhoven <pip88nl@gmail.com>
+Uploaders: 
+  Pippijn van Steenhoven <pip88nl@gmail.com>
+Build-Depends:
+  ocaml-nox (>= 3.12),
+  ocaml-findlib,
+  omake,
+  noweb,
+  libbaselib-ocaml-dev,
+  libsexplib-camlp4-dev,
+  dh-ocaml,
+  debhelper (>= 8.0.0)
+Standards-Version: 3.9.2
+Homepage: https://github.com/pippijn/re2ml
+Vcs-Git: git://github.com/pippijn/re2ml
+Vcs-Browser: https://github.com/pippijn/re2ml
+
+Package: re2ml
+Architecture: any
+Depends: ${ocaml:Depends}, ${misc:Depends}, ${shlibs:Depends}
+Provides: ${ocaml:Provides}
+Description: Fast lexer generator compatible with ocamllex
+ Stuff.
