@@ -7,6 +7,7 @@ install:
    - chmod +x travis-depend
    - ./travis-depend baselib
    - ./travis-depend codegen
+   - sudo sh -c 'cat debian/camlp4-meta.patch >> /usr/lib/ocaml/METAS/META.camlp4'
 
 # whitelist
 branches:
