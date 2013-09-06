@@ -3,7 +3,7 @@ script: dpkg-buildpackage -b -us -uc
 
 install:
    - sudo apt-get install omake noweb valgrind dh-ocaml libbatteries-ocaml-dev libsexplib-camlp4-dev libderiving-ocsigen-ocaml-dev
-   - wget https://raw.github.com/pippijn/obuild/master/script/travis-depend
+   - wget https://raw.github.com/pippijn/obuild/master/script/travis-depend?$(date +%s) -O travis-depend
    - chmod +x travis-depend
    - ./travis-depend baselib
    - ./travis-depend codegen
