@@ -10,6 +10,7 @@ Build-Depends:
   ocaml-findlib,
   noweb,
   menhir,
+  camlp4-extra,
   libbaselib-ocaml-dev,
   libsexplib-camlp4-dev,
   dh-ocaml,
