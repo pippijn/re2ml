@@ -79,16 +79,6 @@
     | EOF -> "EOF"
 
 
-  let include_file inc =
-    let startpos = String. index inc '"' + 1 in
-    let endpos	 = String.rindex inc '"' in
-    String.sub inc startpos (endpos - startpos)
-
-
-  let remove_quotes str =
-    String.sub str 1 (String.length str - 2)
-
-
   let remove_braces str =
     let startpos = String. index str '{' + 1 in
     let endpos	 = String.rindex str '}' in
@@ -96,24 +86,11 @@
     |> BatString.trim
 
 
-  let remove_parens str =
-    let startpos = String. index str '(' + 1 in
-    let endpos	 = String.rindex str ')' in
-    String.sub str startpos (endpos - startpos)
-    |> BatString.trim
-
-
   let parse_string str =
-    Sloc.at str (Sloc.value str |> remove_quotes |> CoreString.unescaped)
+    Scanf.sscanf (Sloc.value str) "%S%!" (Sloc.at str)
 
   let parse_char str =
-    let unesaped = Sloc.value (parse_string str) in
-    if String.length unesaped != 1 then (
-      Diagnostics.error str "invalid character literal: %s (%s)"
-	(Sloc.value str)
-	(String.escaped unesaped)
-    );
-    Sloc.at str unesaped.[0]
+    Scanf.sscanf (Sloc.value str) "%C%!" (Sloc.at str)
 
 
   let output_position out p =
