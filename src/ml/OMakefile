@@ -1,4 +1,4 @@
-Name = re2ml
+Name		= re2ml
 
 OCaml-Sources[] =
   Ast
